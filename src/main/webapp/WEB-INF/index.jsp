@@ -31,5 +31,7 @@
     
     <h1>Hello World, welcome to <c:out value="${dojoName}"/></h1>
     
+    <a href = "/counter">Checkout visits!</a>
+    
 </body>
 </html>
