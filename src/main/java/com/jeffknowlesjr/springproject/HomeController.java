@@ -1,25 +1,25 @@
 package com.jeffknowlesjr.springproject;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/coding")
+@Controller
 public class HomeController {
-	
-	@RequestMapping("")
-	public String hello() {
-		return "Hello Coding Dojo!";
+	@RequestMapping("/")
+	public String index(Model model) {
+		model.addAttribute("dojoName","Tysons Corner");
+		return "index.jsp";
 	}
-	
-	@RequestMapping("python")
-	public String python() {
-		return "Python/Django was awesome!";
+	@RequestMapping("/date")
+	public String date(Model model) {
+		model.addAttribute("app","date");
+		return "dateTime.jsp";
 	}
-	
-	@RequestMapping("java")
-	public String java() {
-		return "Java/Spring is better?";
+	@RequestMapping("/time")
+	public String time(Model model) {
+		model.addAttribute("app","time");
+		return "dateTime.jsp";
 	}
-	
 }
+ 
